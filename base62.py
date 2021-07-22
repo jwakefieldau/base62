@@ -5,15 +5,12 @@ def digit_to_b62_char(input_i: int) -> str:
 	# '0' to '9'
 	if input_i >= 0 and input_i <= 9:
 		return chr(48 + input_i)
-
 	# 'A' to 'Z'
 	elif input_i >= 10 and input_i <= 35:
 		return chr(55 + input_i)
-
 	# 'a' to 'z'
 	elif input_i >= 36 and input_i <= 61:
 		return chr(61 + input_i)
-
 	else:
 		raise ValueError(f"{input_i} falls outside range for base62")
 
@@ -24,15 +21,12 @@ def b62_char_to_digit(input_c: str) -> int:
 	# '0' to '9'
 	if input_ord >= 48 and input_ord <= 57:
 		return (input_ord - 48)
-
 	# 'A' to 'Z'
 	elif input_ord >= 65 and input_ord <= 90:
 		return (input_ord - 55)
-
 	# 'a' to 'z'
 	elif input_ord >= 97 and input_ord <= 122:
 		return (input_ord - 61)
-
 	else:
 		raise ValueError(f"{input_c} falls outside range for base62")
 
